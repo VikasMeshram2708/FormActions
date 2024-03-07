@@ -2,6 +2,8 @@
 
 import { handleSearch } from "@/lib/CreateTodos";
 import React, { useRef } from "react";
+import Button from "./Button";
+import { useFormStatus } from "react-dom";
 
 export default function TodoForm() {
   const ref = useRef<HTMLFormElement>(null);
@@ -22,9 +24,8 @@ export default function TodoForm() {
           name="name"
           id="name"
         />
-        <button type="submit" className="mt-5 btn btn-primary btn-sm">
-          Search
-        </button>
+        {/* Button component */}
+        <Button />
       </div>
     </form>
   );
