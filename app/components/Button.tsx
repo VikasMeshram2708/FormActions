@@ -7,7 +7,7 @@ export default function Button() {
   const { pending } = useFormStatus();
 
   return (
-    <button type="submit" className="mt-5 btn btn-primary btn-sm">
+    <button disabled={pending} type="submit" className="mt-5 btn btn-primary btn-sm">
       {pending ? "Loading..." : "Search"}
     </button>
   );
